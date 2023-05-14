@@ -1,0 +1,228 @@
+/* #FF5757
+#024873
+#025373
+#03738C
+ */
+ @font-face {
+  font-family: 'DogTown Typewriter';
+  src: url('/Assets/Typefaces/dogtown-typewriter.regular.ttf');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  background-color:#EACAD0;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 40px 0 20px 0;
+  padding: 15px;
+  /* height: 70px; */
+  
+  /* background-color: #FF5757; */
+  list-style: none;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: #03738C;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  color: #F24C3D;
+}
+
+#maramoo-txt {
+  color: #F24C3D;
+}
+
+.smoke {
+  /* top:50%;
+  lefT:50%; */
+  /* transform:translate(-50%,-50%); */
+}
+
+.smoke ul {
+  margin:0;
+  padding:0;
+  display:flex;
+  
+}
+
+.smoke ul li {
+  list-style:none;
+  font-weight:bold;
+  letter-spacing:10px;
+  filter:blur(1px);
+  color:#03738C;
+  font-size:48px;
+  /* display: inline-block; */
+}
+
+
+.smoke ul:hover li {
+  animation: smoke 4s linear forwards;
+  color: #F24C3D
+}
+
+
+@keyframes smoke {
+  0% {
+      transform: rotate(0deg) translateY(0px);
+      opacity: 1;
+      filter:blur(1px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(-200px);
+      opacity: 0;
+      filter:blur(20px);
+  }
+}
+
+.smoke ul li:nth-child(1){
+  animation-delay:0s
+}
+.smoke ul li:nth-child(2){
+  animation-delay:.4s
+}
+.smoke ul li:nth-child(3){
+  animation-delay:.8s
+}
+.smoke ul li:nth-child(4){
+  animation-delay:1.2s
+}
+.smoke ul li:nth-child(5){
+  animation-delay:1.6s
+}
+
+/* Hero sectiom */
+
+.hero-wrapper {
+  background-color: inherit;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+#hero-img {
+  position: absolute;
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3; /* This places the top image in front of the bottom image */
+
+  animation: zoom 20s infinite linear; /* Adjust time as needed */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4); /* The image will zoom to 120% of its original size at the 50% mark of the animation duration */
+  }
+  100% {
+    transform: scale(1); /* And it will return to its original size at the end */
+  }
+}
+
+#leaf-img-right {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+  z-index: 1; /* This places the bottom image behind the top image */
+  
+  left: 0; /* This places the image on the left side of the container at the start of the animation */
+  animation: rotateAndSlide 10s infinite linear; /* Adjust time as needed */
+}
+
+@keyframes rotateAndSlide {
+  0% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+  50% {
+    transform: rotate(180deg);
+    left: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    left: 0;
+  }
+}
+
+#leaf-img-left {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+  z-index: 1; /* This places the bottom image behind the top image */
+  
+  right: 0; /* This places the image on the left side of the container at the start of the animation */
+  animation: rotateAndSlideReversed 10s infinite linear; /* Adjust time as needed */
+}
+
+@keyframes rotateAndSlideReversed {
+  0% {
+    transform: rotate(0deg);
+    right: 0;
+  }
+  50% {
+    transform: rotate(180deg);
+    right: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    right: 0;
+  }
+}
+
+
+/* Bio Section */
+
+
+#bio-txt {
+  color:black;
+  font-family: 'DogTown Typewriter';
+  font-size: 35px;
+  text-align: center;
+  margin-top: 70px;
+  padding: 15px;
+  opacity: .7;
+}
+
+#leaf-icon, #mic-icon, #video-icon {
+  color: #03738C;
+}
+
+
+/* Footer Section */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;            /* Footer height */
+  text-align: center;
+
+  background-color: #03738C;
+  color:antiquewhite;
+}
+
+/* Newsletter Form */
+
+
+
+
